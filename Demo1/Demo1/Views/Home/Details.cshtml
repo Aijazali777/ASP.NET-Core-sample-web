@@ -1,0 +1,50 @@
+﻿@model HomeDetailsViewModel
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Employee's Details";
+}
+
+@*
+    <h2>@ViewBag.PageTitle</h2>
+
+    <div>
+        Name: @ViewBag.Employee.Name
+    </div>
+    <div>
+        Id: @ViewBag.Employee.Id
+    </div>
+    <div>
+        Email: @ViewBag.Employee.Email
+    </div>
+    <div>
+        Department: @ViewBag.Employee.Department
+    </div>
+*@
+
+
+<div class="row justify-content-center m-1">
+    <div class="col">
+        <div class="card">
+            <div class="card-header">
+                <h3>@Model.Employee.Name</h3>
+            </div>
+            <div class="card-body">
+                <img src="~/images/man2.jpg" class="card-img-top">
+                <h4>Id: @Model.Employee.Id</h4>
+                <h4>Email: @Model.Employee.Email</h4>
+                <h4>Department: @Model.Employee.Department</h4>
+            </div>
+        </div>
+    </div>
+</div>
+
+@*
+<h2>@Model.PageTitle</h2>
+<div>
+    Name: @Model.Employee.Name
+    Id: @Model.Employee.Id
+    Email: @Model.Employee.Email
+    Department: @Model.Employee.Department
+</div>
+    *@

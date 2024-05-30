@@ -1,0 +1,30 @@
+﻿@model Employee
+@inject IEmployeeRepository empRepo
+
+@{ 
+    ViewBag.Title = "Create Employee";
+}
+
+<form asp-controller="Home" asp-action="Create" method="post">
+    <div class="row mb-3">
+        <label asp-for="Name" class="col-sm-2 col-form-label"></label>
+        <input asp-for="Name" class="form-control" placeholder="Enter Name" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+    <div class="row mb-3">
+        <label asp-for="Email" class="col-sm-2 col-form-label"></label>
+        <input asp-for="Email" class="form-control" placeholder="Enter Email" />
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+    <div class="row mb-3">
+        <label asp-for="Department" class="col-sm-2 col-form-label"></label>
+        <input asp-for="Department" class="form-control" placeholder="Enter Department" />
+        <span asp-validation-for="Department" class="text-danger"></span>
+    </div>
+    <div class="row mb-3">
+        <button class="btn btn-primary" width="30">Create</button>
+    </div>
+    <div class="row mb-3">
+        Total Employees Count = @empRepo.GetAllEmployees().Count()
+    </div>
+</form>
